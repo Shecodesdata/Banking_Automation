@@ -1,0 +1,108 @@
+----------------
+Project Category|
+----------------
+
+>>>Desktop Project
+
+-------------
+Project Title|
+-------------
+
+>>>Banking Automation
+
+----------
+User Types|
+----------
+
+>>>User
+>>>Admin
+
+----------------
+Roles of Admin: |
+---------------- 
+
+1~ Opening user account
+2~ Closing user account
+3~ View user accounts 
+
+---------------
+Roles of User: |
+---------------
+
+1~ Login(Authentication)
+2~ Recover Password
+3~ Updating Profile Picture
+4~ Updating Accounts Details(Password,Mobile,Email)
+5~ Deposit
+6~ Withdraw
+7~ Transfer
+8~ History
+9~ Balance Check
+
+-------------------
+Front End Libraries|
+-------------------
+
+* tkinter(Standard Library)
+* Pillow(3r party)
+* tkintertable(3r party)
+* datetime(Standard Library)
+* tkcalendar(3r party)
+* gmail(3r party)
+
+-----------------
+BackEnd(database)|
+-----------------
+
+* sqlite
+
+-------
+Tables:|
+-------
+
+1~ Accounts
+
+       accounts_acno             integer primary key autoincrement
+       accounts_Name             text
+       accounts_pass             text
+       accounts_Email            text
+       accounts_Mobile           text
+       accounts_Adhar            text
+       accounts_Pan              text
+       accounts_DOB              text
+       accounts_Address          text
+       accounts_Gender           text
+       accounts_Nominee          text
+       accounts_opendate         text
+       accounts_bal              float
+
+2~ stmts
+
+       stmts_acn                 integer
+       stmts_amt                 float
+       stmts_type                text
+       stmts_date                text
+       stmts_update_bal          float
+       stmts_txnid               text          primary key
+
+---------
+Workflow:|
+---------
+
+>>>First admin need to login using ACN=0 and Pass=admin
+>>>Then admin opens account for customers
+>>>acn,initial pass sent to customer email
+
+>>>user(customer) can login using provides ACN & Pass in email
+>>>user can change pass & perform various activities
+
+
+
+
+
+
+
+
+
+
+             
